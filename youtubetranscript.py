@@ -62,7 +62,7 @@ for i in range(5):
     "q": split_response[i]
     })
     headers = {
-        'X-API-KEY': 'c40d9e39db24a307b761233401835fc29a618489',
+        'X-API-KEY': os.environ.get("SERPER_API_KEY"),
         'Content-Type': 'application/json'
     }
     response = requests.request("POST", "https://google.serper.dev/search", headers=headers, data=payload)
